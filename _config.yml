@@ -6,6 +6,14 @@ author:
   name: "مهدی علیزاده"
   email: "m.alizadeh7@live.com"
   location: "استان تهران"
+  bio: "مهندس فناوری اطلاعات و دانش‌آموختهٔ MBA؛ نویسندهٔ فناوری، امنیت سایبری و کسب‌وکار."
+
+logo: "/assets/images/mahdi-alizadeh-mark.svg"
+twitter:
+  card: summary
+social:
+  name: "مهدی علیزاده"
+  links: []
 
 lang: fa
 timezone: Asia/Tehran
@@ -18,10 +26,21 @@ collections:
     output: true
     permalink: /blog/:name/
 
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: post
+      author: "مهدی علیزاده"
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - _posts/TEMPLATE.md

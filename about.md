@@ -2,6 +2,11 @@
 layout: default
 title: "دربارهٔ من"
 permalink: /about/
+faq:
+  - question: "مهدی علیزاده در چه حوزه‌هایی می‌نویسد؟"
+    answer: "فناوری اطلاعات، رایانش ابری، امنیت سایبری، هوش مصنوعی و پیوند فناوری با کسب‌وکار."
+  - question: "پیشینهٔ تحصیلی مهدی علیزاده چیست؟"
+    answer: "کارشناسی مهندسی فناوری اطلاعات و دانش‌آموختهٔ MBA از مؤسسهٔ ماهان."
 ---
 <section class="page container prose about-page">
   <p class="eyebrow">دربارهٔ من</p>
@@ -34,7 +39,3 @@ permalink: /about/
     <p>او دارای کارشناسی مهندسی فناوری اطلاعات و دانش‌آموختهٔ MBA از مؤسسهٔ ماهان است.</p>
   </section>
 </section>
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"مهدی علیزاده در چه حوزه‌هایی می‌نویسد؟","acceptedAnswer":{"@type":"Answer","text":"فناوری اطلاعات، رایانش ابری، امنیت سایبری، هوش مصنوعی و پیوند فناوری با کسب‌وکار."}},{"@type":"Question","name":"پیشینهٔ تحصیلی مهدی علیزاده چیست؟","acceptedAnswer":{"@type":"Answer","text":"کارشناسی مهندسی فناوری اطلاعات و دانش‌آموختهٔ MBA از مؤسسهٔ ماهان."}}]}
-</script>
