@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b3b36">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% seo %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="صفحهٔ اصلی">
+          <span class="brand-mark">م</span>
+          <span>{{ site.author.name }}</span>
+        </a>
+        <nav aria-label="ناوبری اصلی">
+          <a href="{{ '/' | relative_url }}">نوشته‌ها</a>
+          <a href="{{ '/about/' | relative_url }}">دربارهٔ من</a>
+          <a href="mailto:{{ site.author.email }}">تماس</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© {{ 'now' | date: '%Y' }} مهدی علیزاده. با دقت و کنجکاوی نوشته می‌شود.</p>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      </div>
+    </footer>
+  </body>
+</html>

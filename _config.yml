@@ -1,0 +1,24 @@
+title: "یادداشت‌های مهدی علیزاده"
+description: "نوشته‌هایی دربارهٔ فناوری، یادگیری و مسیر حرفه‌ای"
+url: "https://alizadehx.ir"
+baseurl: ""
+author:
+  name: "مهدی علیزاده"
+  email: "m.alizadeh7@live.com"
+  location: "استان تهران"
+
+lang: fa
+timezone: Asia/Tehran
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: rouge
+future: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
