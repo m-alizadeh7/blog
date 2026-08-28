@@ -13,10 +13,13 @@ permalink: /:categories/:title/
 markdown: kramdown
 highlighter: rouge
 future: false
+collections:
+  articles:
+    output: true
+    permalink: /blog/:name/
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
 exclude:
   - Gemfile

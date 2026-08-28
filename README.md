@@ -15,4 +15,4 @@ bundle exec jekyll serve
 
 در مخزن GitHub از مسیر **Settings → Pages**، گزینهٔ **Deploy from a branch** را انتخاب و شاخهٔ `main` و پوشهٔ `/(root)` را تعیین کنید. برای دامنهٔ شخصی، در همین بخش `alizadehx.ir` را وارد و رکوردهای DNS دامنه را مطابق راهنمای GitHub تنظیم کنید.
 
-برای افزودن نوشته، یک فایل Markdown با نام `YYYY-MM-DD-title.md` در پوشهٔ `_posts` ایجاد کنید.
+برای افزودن مقاله، یک فایل Markdown در پوشهٔ `_articles` ایجاد کنید. هر مقاله باید `title`، `date`، `description`، `tags` و `categories` داشته باشد.

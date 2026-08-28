@@ -1,14 +1,30 @@
+{% assign page_title = page.title | default: site.title %}
+{% assign seo_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 %}
 <!doctype html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0b3b36">
+    <title>{{ page_title }} | {{ site.author.name }}</title>
+    <meta name="description" content="{{ seo_description }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" hreflang="fa-IR" href="{{ page.url | absolute_url }}">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ seo_description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta name="twitter:card" content="summary">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/article.css' | relative_url }}">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","name":"{{ site.author.name }}","url":"{{ site.url }}","email":"{{ site.author.email }}","jobTitle":"مهندس فناوری اطلاعات و دانش‌آموختهٔ MBA","address":{"@type":"PostalAddress","addressRegion":"تهران","addressCountry":"IR"},"knowsAbout":["فناوری اطلاعات","رایانش ابری","امنیت سایبری","هوش مصنوعی","مدیریت"]}
+    </script>
   </head>
   <body>
     <header class="site-header">

@@ -1,0 +1,6 @@
+.post-content h2 { margin-top: 2.3em; font-size: 1.55rem; }
+.post-content h3 { margin-top: 1.8em; font-size: 1.2rem; }
+.post-content a { color: #0d6257; text-decoration: underline; text-decoration-color: #9fc1b8; text-underline-offset: 3px; }
+.post-content img { max-width: 100%; height: auto; border-radius: 4px; }
+.article-tags { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 28px; color: var(--muted); font-size: .82rem; }
+.article-tags span:not(:first-child) { padding: 2px 10px; background: #e7efea; color: var(--green); border-radius: 999px; }

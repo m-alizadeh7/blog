@@ -20,21 +20,22 @@ title: "یادداشت‌های مهدی علیزاده"
   </div>
 </section>
 
+{% assign articles = site.articles | sort: "date" | reverse %}
 <section class="container posts-section" id="posts">
   <div class="section-heading">
     <div>
       <p class="eyebrow">آرشیو</p>
       <h2>آخرین نوشته‌ها</h2>
     </div>
-    <span>{{ site.posts.size }} نوشته</span>
+    <span>{{ articles.size }} نوشته</span>
   </div>
 
-  {% if site.posts.size > 0 %}
+  {% if articles.size > 0 %}
   <div class="post-list">
-    {% for post in site.posts %}
+    {% for post in articles %}
     <article class="post-card">
       <p class="post-date">{{ post.date | date: "%Y/%m/%d" }}</p>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | remove: '📝' | remove: '🎙️' }}</a></h3>
       <p>{{ post.excerpt | strip_html | truncate: 155 }}</p>
       <a class="text-link" href="{{ post.url | relative_url }}">ادامهٔ نوشته ←</a>
     </article>
@@ -43,7 +44,7 @@ title: "یادداشت‌های مهدی علیزاده"
   {% else %}
   <div class="empty-state">
     <p>اولین نوشته هنوز در راه است.</p>
-    <p>فایل‌های جدید را در پوشهٔ <code>_posts</code> اضافه کنید.</p>
+    <p>فایل‌های جدید را در پوشهٔ <code>_articles</code> اضافه کنید.</p>
   </div>
   {% endif %}
 </section>
